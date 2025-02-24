@@ -23,7 +23,7 @@ app.post('/signup', (req,res) => {
         return res.status(400).json({ error: "Email cannot be empty"}) ;
     }
 
-    if (password.length > 8 && password.length <= 16){
+    if (password.length > 8 || password.length <= 16){
         return res.status(400).json({ error: "Password length should be greater than 8 or less than or equal to 16 "});
     }
 
